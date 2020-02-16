@@ -1,0 +1,11 @@
+@import url(./__text/load__text.css);
+@import url(./__preloader/load__preloader.css);
+
+.load {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    display: none;
+}

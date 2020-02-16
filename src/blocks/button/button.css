@@ -1,0 +1,17 @@
+@import url(../button/button_type_search.css);
+@import url(../button/button_type_more.css);
+
+.button {
+    
+    border: none;
+    border-radius: 100px;
+    padding-top: 18px;
+    padding-bottom: 22px;
+    cursor: pointer;
+    outline: none;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}

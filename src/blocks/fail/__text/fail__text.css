@@ -1,0 +1,11 @@
+.fail__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 auto;
+
+    max-width: 356px;
+    color: #B6BCBF;
+}

@@ -1,0 +1,15 @@
+
+.nav__link_checked {
+    font-weight: 500;
+    color: #FFFFFF;
+ }
+
+.nav__link_checked:after {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 3px;
+   background-color: #FFFFFF;
+    position: relative;
+    top: 28px;
+}

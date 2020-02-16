@@ -1,2 +1,24 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
+
+@import url(../blocks/root/root.css);
+@import url(../blocks/page/page.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/logo/logo.css);
+@import url(../blocks/nav/nav.css);
+@import url(../blocks/title/title.css);
+@import url(../blocks/lead/lead.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/button/button.css);
+@import url(../blocks/load/load.css);
+@import url(../blocks/results/results.css);
+@import url(../blocks/fail/fail.css);
+@import url(../blocks/content-title/content-title.css);
+@import url(../blocks/link/link.css);
+@import url(../blocks/title-section/title-section.css);
+@import url(../blocks/card-box/card-box.css);
+@import url(../blocks/card/card.css);
+@import url(../blocks/about/about.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/socials/socials.css);
+@import url(../blocks/copyright/copyright.css);

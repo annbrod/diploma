@@ -1,0 +1,8 @@
+@import url(./__link/socials__link.css);
+@import url(./__item/socials__item.css);
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}

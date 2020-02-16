@@ -1,0 +1,8 @@
+@import url(./__image/about__image.css);
+@import url(./__text/about__text.css);
+@import url(./__paragraph/about__paragraph.css);
+
+.about {
+    padding: 80px 104px;
+    display: flex;
+}

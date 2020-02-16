@@ -1,0 +1,7 @@
+@import url(./__field/search__field.css);
+
+.search {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
