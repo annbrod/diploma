@@ -2,3 +2,7 @@
     max-width: 600px;
     padding-top: 51px;
 }
+
+.about__text {
+    padding-top: 2px;
+}

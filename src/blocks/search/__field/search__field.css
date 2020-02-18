@@ -19,3 +19,18 @@
 .search__field::placeholder {
     color: #B6BCBF;
 }
+
+@media screen and (max-width: 768px) {
+    .search__field {
+        padding: 16px 196px 16px 24px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .search__field {
+        padding: 17px 16px;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
+

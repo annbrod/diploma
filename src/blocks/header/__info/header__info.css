@@ -6,3 +6,15 @@
     padding: 30px 101px 26px 101px;
     box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
 }
+
+@media screen and (max-width: 768px) {
+    .header__info {
+        padding: 22px 42px 18px 40px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .header__info {
+        padding: 16px;
+    }
+}

@@ -13,3 +13,9 @@
     position: absolute;
     bottom: 24px;
 }
+
+@media screen and (max-width: 768px) {
+    .card__source {
+        bottom: 16px;
+    }
+}

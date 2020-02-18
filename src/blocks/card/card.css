@@ -7,7 +7,6 @@
 
 .card {
     width: calc(100% /3 - 16px);
-    height: 576px;
     margin-right: 16px;
     margin-bottom: 16px;
     background: #FFFFFF;
@@ -15,4 +14,31 @@
     font-size: 0;
     box-shadow: 0px 9px 58px -32px rgba(8, 29, 45, 0.1);
     position: relative;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .card {
+        width: calc(100% /3 - 8px);
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .card {
+        width: calc(100% /3);
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .card {
+       width: 100%;
+        margin-right: 0;
+        margin-bottom: 13px;
+
+    }
 }

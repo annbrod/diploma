@@ -3,8 +3,15 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-
+    height: 110px;
+    overflow-y: hidden;
     margin-top: 0;
     margin-bottom: 18px;
-    /*В JS нужно будет ограниить высоту*/
+    /*В JS нужно будет ограниить кол-во строк*/
+}
+
+@media screen and (max-width: 768px) {
+    .card__text {
+        height: 88px;
+    }
 }

@@ -1,3 +1,22 @@
 .card__description {
     padding: 20px 16px 18px;
+    height: 304px;
+}
+
+@media screen and (max-width: 768px) {
+    .card__description {
+       padding: 16px;
+       padding-bottom: 12px;
+
+       height: 270px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .card__description {
+       padding: 16px;
+       padding-bottom: 12px;
+        
+       height: 247px;
+    }
 }

@@ -13,3 +13,15 @@
     position: relative;
     top: 28px;
 }
+
+@media screen and (max-width: 768px) {
+    .nav__link_checked:after {
+        top: 20px;
+     }
+}
+
+@media screen and (max-width: 510px) {
+    .nav__link_checked:after {
+        top: 17px;
+     }
+}

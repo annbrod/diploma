@@ -7,3 +7,16 @@
     margin-top: 0;
     margin-bottom: 64px;
 }
+
+@media screen and (max-width: 768px) {
+    .lead {
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .lead {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}

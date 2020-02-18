@@ -9,3 +9,25 @@
     margin-bottom: 16px;
 
 }
+
+@media screen and (max-width: 768px) {
+    .card__title {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 10px;
+
+        height: 72px;
+        overflow-y: hidden;
+        /*JS - ограничение строк*/ 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card__title {
+        font-size: 22px;
+        line-height: 26px;
+        height: 52px;
+        overflow-y: hidden;
+        /*JS - ограничение строк*/ 
+    }
+}

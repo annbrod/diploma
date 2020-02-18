@@ -17,3 +17,17 @@
 }
 
 
+@media screen and (max-width: 768px) {
+    .button_type_search {
+        padding-left: 50px;
+        padding-right: 49px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .button_type_search {
+        padding: 16px 113px;
+        width: 100%;
+        position: relative;
+    }
+}

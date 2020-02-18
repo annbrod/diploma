@@ -12,3 +12,17 @@
     content: url(../../images/link-arrow.svg);
     padding-left: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .link {
+        margin-bottom: 16px;
+        align-self: flex-end;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .link {
+        align-self: flex-start;
+    }
+}

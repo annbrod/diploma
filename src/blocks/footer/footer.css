@@ -4,3 +4,24 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 21px 42px 21px 40px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .footer {
+        flex-direction: column-reverse;
+    }
+}
+
+
+@media screen and (max-width: 670px) {
+    .footer {
+        padding: 20px 16px 22px;
+        position: relative;
+        align-items: flex-start;
+    }
+}
