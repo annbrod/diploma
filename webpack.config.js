@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
     entry: { main: './src/index.js' },
@@ -82,13 +82,20 @@ module.exports = {
             },
             canPrint: true
         }),
+
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+            favicon: './src/images/favicon.png'
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './src/about.html',
+            filename: 'about.html',
+            favicon: './src/images/favicon.png'
         }),
         new WebpackMd5Hash(),
-
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         })

@@ -1,0 +1,7 @@
+.nav__link_theme_dark {
+    color: #FFFFFF;
+}
+
+.nav__link_theme_dark::after {
+    background-color: #FFFFFF;
+}

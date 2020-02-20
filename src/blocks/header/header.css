@@ -1,10 +1,7 @@
 @import url(./__info/header__info.css);
 @import url(./__main/header__main.css);
+@import url(./header_type_home.css);
 
 .header {
-    background-image: url(../../images/bg-header.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     color: #FFFFFF;
 }

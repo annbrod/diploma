@@ -1,0 +1,7 @@
+.nav__link_theme_light{
+    color: #000000;
+}
+
+.nav__link_theme_light::after {
+    background-color: #000000
+}
