@@ -1,20 +1,19 @@
-@import url(./__image/about__image.css);
-@import url(./__text/about__text.css);
-@import url(./__paragraph/about__paragraph.css);
+@import url(./__image/author__image.css);
+@import url(./__image-wrapper/author__image-wrapper.css);
 
-.about {
+.author {
     padding: 80px 104px;
     display: flex;
 }
 
 @media screen and (max-width: 768px) {
-    .about {
+    .author {
         padding: 40px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .about {
+    .author {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -22,7 +21,7 @@
 }
 
 @media screen and (max-width: 375px) {
-    .about {
+    .author {
         padding: 20px 16px 44px;
     }
 }

@@ -1,0 +1,5 @@
+@media screen and (max-width: 510px) {
+    .skill__item {
+        margin-bottom: 35px;
+    }
+}

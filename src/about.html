@@ -7,11 +7,14 @@
     <link rel="shortcut icon" href="./src/images/favicon.png" type="image/png">
     <title>О проекте</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+
+
+
 </head>
 
 <body class="root">
     <header class="header">
-        <section class="header__info">
+        <section class="header__info header__info_theme_light">
             <a href="#" class="logo">
                 <svg class="logo__image logo__image_theme_light" fill="none" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 138 21">
@@ -33,16 +36,150 @@
         </section>
     </header>
 
+    <main class="page">
+
+        <section class="description">
+            <h2 class="content-title">Клиентам</h2>
+            <div class="text text_type_description">
+                <p class="text__paragraph">
+                    Этот сайт — дипломный проект студента Яндкс.Практикума. Его цель — показать, чему научился студент,
+                    и какими технологиями владеет.
+                </p>
+                <p class="text__paragraph">
+                    Вёртска сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того,
+                    добавлять новые страницы и функциальность проще и быстрее, чем в проектах, выполненных по другим
+                    методологиям. Также сайт проще и дешевле поддерживать.
+                </p>
+                <p class="text__paragraph">
+                    Карточки с новостям приходят с сервера и обрабатываются асихронно. То есть сайт продолжает работать,
+                    пока от сервера приходит ответ. Это повышает удобство использования сервиса.
+                </p>
+                <p class="text__paragraph">
+                    При создании проекта была использона сборка технологией Webpack. Это современных подход к разработке
+                    сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также настроена сайт работает в старых
+                    браузерах. Даже если посетители — пользователи старых операционных систем у них не будет проблем с
+                    отображением. А значит потенциальная аудитория возрастает.
+                </p>
+                <p class="text__paragraph">
+                    Проект был проверен экспертами Яндекс.Практикума. И если вашему бизесу нужен сайт, мы рекомендуем
+                    обратиться к этому студенту.
+                </p>
+            </div>
+        </section>
+
+        <section class="skill">
+            <div class="skill__title-wrap">
+                <h2 class="content-title">Используемые технологии</h2>
+            </div>
+            <ul class="skill__list">
+                <li class="skill__item">
+                    <h3 class="skill__name">HTML</h3>
+                    <img class="skill__image" src="<%=require('./images/html.svg')%>" alt="HTML">
+                </li>
+                <li class="skill__item">
+                    <h3 class="skill__name">CSS</h3>
+                    <img class="skill__image" src="<%=require('./images/css.svg')%>" alt="CSS">
+                </li>
+                <li class="skill__item">
+                    <h3 class="skill__name">Java Script</h3>
+                    <img class="skill__image" src="<%=require('./images/js.svg')%>" alt="Java Script">
+                </li>
+                <li class="skill__item">
+                    <h3 class="skill__name">Webpack</h3>
+                    <img class="skill__image" src="<%=require('./images/webpack.svg')%>" alt="Webpack">
+                </li>
+            </ul>
+        </section>
+
+        <section class="author">
+            <div class="author__image-wrapper">
+                <img class="author__image" src="<%=require('./images/avatar464.jpg')%>" alt="Аватар">
+            </div>
+            <div class="text text_type_author">
+                <h2 class="content-title">Об авторе</h2>
+                <p class="text__paragraph">
+                    Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь,
+                    какими технологиями разработки владете.
+                </p>
+                <p class="text__paragraph">
+                    Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+                    потенциальным заказчикам.
+                </p>
+            </div>
+        </section>
+
+        <section class="git">
+            <div class="title-section title-section_type_git">
+                <h2 class="content-title">История коммитов из GitHub</h2>
+                <a href="" class="link link_type_git">Открыть в Github</a>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <span class="swiper-slide__date">14 августа, 2019</span>
+                        <div class="swiper-slide__info">
+                            <img class="swiper-slide__image" src="<%=require('./images/commit1.jpg')%>"
+                                alt="Антон Долинин">
+                            <div class="swiper-slide__contacts">
+                                <p class="swiper-slide__name">Антон Долинин</p>
+                                <p class="swiper-slide__email">anton@yandex.ru</p>
+                            </div>
+                        </div>
+                        <p class="swiper-slide__text">
+                            Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML
+                            & CSS workflow.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <span class="swiper-slide__date">14 августа, 2019</span>
+                        <div class="swiper-slide__info">
+                            <img class="swiper-slide__image" src="<%=require('./images/commit2.jpg')%>"
+                                alt="Мария Фёдорова">
+                            <div class="swiper-slide__contacts">
+                                <p class="swiper-slide__name">Мария Фёдорова</p>
+                                <p class="swiper-slide__email">mariiifed@yandex.ru</p>
+                            </div>
+                        </div>
+                        <p class="swiper-slide__text">
+                            You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open <code
+                                class="swiper-slide__code">Tools >
+                            Plugins > Available plugins</code> and find and install Emmet plugin.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <span class="swiper-slide__date">14 августа, 2019</span>
+                        <div class="swiper-slide__info">
+                            <img class="swiper-slide__image" src="<%=require('./images/commit3.jpg')%>"
+                                alt="Инга Иванова">
+                            <div class="swiper-slide__contacts">
+                                <p class="swiper-slide__name">Инга Иванова</p>
+                                <p class="swiper-slide__email">ingaiva@yandex.ru</p>
+                            </div>
+                        </div>
+                        <p class="swiper-slide__text">
+                            With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce
+                            output depending on what you type in the abb...
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <a href="#" class="button button_type_git">Открыть в GitHub</a>
+        </section>
+
+    </main>
 
     <footer class="footer">
         <p class="copyright">© 2019 Supersite</p>
         <nav class="nav">
             <ul class="nav__list nav__list_type_footer">
                 <li class=" nav__item nav__item_type_footer">
-                    <a href="" class="nav__link">Главная</a>
+                    <a href="#" class="nav__link">Главная</a>
                 </li>
                 <li class="nav__item nav__item_type_footer">
-                    <a href="" class="nav__link">О проекте</a>
+                    <a href="#" class="nav__link">О проекте</a>
                 </li>
                 <li class="nav__item nav__item_type_footer">
                     <a href="https://praktikum.yandex.ru/" class="nav__link">Яндекс.Практикум</a>

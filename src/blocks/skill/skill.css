@@ -1,0 +1,32 @@
+@import url(./__title-wrap/skill__title-wrap.css);
+@import url(./__image/skill__image.css);
+@import url(./__item/skill__item.css);
+@import url(./__list/skill__list.css);
+@import url(./__name/skill__name.css);
+
+
+.skill {
+    padding: 80px 104px;
+    display: flex;
+  
+    background: #F5F6F7;
+}
+
+@media screen and (max-width: 1024px) {
+    .skill {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skill {
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .skill {
+        padding: 32px 16px;
+        
+    }
+}

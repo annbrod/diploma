@@ -1,10 +1,11 @@
+@import url(./header__info_theme_dark.css);
+@import url(./header__info_theme_light.css);
+
 .header__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 30px 101px 26px 101px;
-    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (max-width: 768px) {

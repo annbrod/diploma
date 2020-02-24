@@ -12,7 +12,7 @@
 
 <body class="root">
     <header class="header header_type_home">
-        <section class="header__info">
+        <section class="header__info header__info_theme_dark">
             <a href="#" class="logo">
                 <svg class="logo__image" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 21">
                     <path
@@ -38,7 +38,7 @@
                 была в новостях за прошедшую неделю.
             </p>
             <form class="search">
-                <input class="search__field" type="text" name="search" placeholder="Введите тему новости">
+                <input class="search__field" type="text" name="search" placeholder="Введите тему новости" required>
                 <button class="button button_type_search" type="submit">Искать</button>
             </form>
         </section>
@@ -55,7 +55,7 @@
                 <h2 class="fail__title">Ничего не найдено</h2>
                 <p class="fail__text">К сожалению по вашему запросу ничего не найдено.</p>
             </section>
-            <div class="title-section">
+            <div class="title-section title-section_type_cards">
                 <h2 class="content-title">Результаты поиска</h2>
                 <a href="" class="link">Посмотреть аналитику</a>
             </div>
@@ -151,16 +151,17 @@
             <button class="button button_type_more">Показать еще</button>
         </section>
 
-        <section class="about">
-            <img class="about__image" src="<%=require('./images/avatar.jpg')%>" alt="Аватар">
-
-            <div class="about__text">
+        <section class="author">
+            <div class="author__image-wrapper">
+                <img class="author__image" src="<%=require('./images/avatar464.jpg')%>" alt="Аватар">
+            </div>
+            <div class="text text_type_author">
                 <h2 class="content-title">Об авторе</h2>
-                <p class="about__paragraph">
+                <p class="text__paragraph">
                     Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь,
                     какими технологиями разработки владете.
                 </p>
-                <p class="about__paragraph">
+                <p class="text__paragraph">
                     Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
                     потенциальным заказчикам.
                 </p>

@@ -1,4 +1,4 @@
-.about__paragraph {
+.text__paragraph {
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -8,8 +8,6 @@
     margin-bottom: 24px;
 }
 
-@media screen and (max-width: 768px) {
-    .about__paragraph {
-        margin-bottom: 0;
-    }
+.text__paragraph:last-child {
+    margin-bottom: 0;
 }

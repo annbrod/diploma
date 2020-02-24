@@ -1,0 +1,27 @@
+.button_type_git {
+    display: none;
+}
+
+@media screen and (max-width: 510px) {
+    .button_type_git {
+        display: block;
+        margin: 0 auto;
+        padding: 0 69px;
+        width: 100%;
+        border: 1px solid #1A1B22;
+        box-sizing: border-box;
+        border-radius: 80px;
+
+        color: #1A1B22; 
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        white-space: nowrap;
+    }
+
+    .button_type_git:hover,
+    .button_type_git:active {
+        opacity: 0.5;
+    }
+}

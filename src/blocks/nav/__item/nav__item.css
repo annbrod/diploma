@@ -7,3 +7,10 @@
 .nav__item:last-child {
     margin-right: 0px;
 }
+
+
+@media screen and (max-width: 510px) {
+    .nav__item {
+        margin-right: 11px;
+    }
+}

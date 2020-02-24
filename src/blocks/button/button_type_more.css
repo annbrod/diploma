@@ -1,4 +1,6 @@
 .button_type_more {
+    border: none;
+    border-radius: 100px;
     margin: 0 auto;
     padding-left: 84px;
     padding-right: 84px;
