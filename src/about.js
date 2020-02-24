@@ -4,10 +4,10 @@ import "./pages/about.css";
 import Swiper from 'swiper';
 
 var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
+    slidesPerView: 'auto',
+    slidesPerColumn: 0,
     loop: true,
+    loopedSlides: 6,
     loopFillGroupWithBlank: true,
     pagination: {
         el: '.swiper-pagination',
@@ -17,18 +17,4 @@ var swiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    breakpoints: {// настройки для разных разрешений
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 16,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 8
-        },
-        510: {
-            slidesPerView: 1,
-            spaceBetween: 3
-        }
-    }
 });
