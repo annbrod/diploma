@@ -1,0 +1,8 @@
+@import url(./__main-page/breadcrumbs__main-page.css);
+@import url(./__current-page/breadcrumbs__current-page.css);
+@import url(./__divider/breadcrumbs__divider.css);
+
+.breadcrumbs {
+    font-size: 18px;
+    line-height: 24px;
+}

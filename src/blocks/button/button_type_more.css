@@ -7,6 +7,12 @@
     background: #FFFFFF;
 }
 
+.button_type_more:hover,
+.button_type_more:active {
+    background: #e8e8e9
+
+}
+
 @media screen and (max-width: 768px) {
     .button_type_more {
         padding-left: 60px;

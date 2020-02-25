@@ -3,5 +3,13 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 30px;
+
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .nav__list_type_footer {
+       
+        margin-bottom: 30px;
     }
 }

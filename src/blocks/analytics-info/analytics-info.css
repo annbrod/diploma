@@ -1,0 +1,15 @@
+.analytics-info {
+    padding: 40px 104px;
+}
+
+@media screen and (max-width: 768px) {
+    .analytics-info {
+        padding: 40px 32px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .analytics-info {
+       display: none;
+    }
+}

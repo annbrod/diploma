@@ -1,0 +1,8 @@
+.breadcrumbs__main-page {
+    text-decoration: none;
+    color: #1A1B22;
+}
+
+.breadcrumbs__main-page:hover {
+    font-weight: 500;
+}

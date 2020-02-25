@@ -7,6 +7,7 @@ var swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
     slidesPerColumn: 0,
     loop: true,
+    uniqueNavElements: true,
     loopedSlides: 6,
     loopFillGroupWithBlank: true,
     pagination: {
@@ -14,7 +15,7 @@ var swiper = new Swiper('.swiper-container', {
         clickable: true,
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper__button-next',
+        prevEl: '.swiper__button-prev',
     },
 });

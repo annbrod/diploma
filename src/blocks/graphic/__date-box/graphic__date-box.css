@@ -1,0 +1,11 @@
+.graphic__date-box {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 510px) {
+    .graphic__date-box {
+        margin-top: 15px;
+    }
+}

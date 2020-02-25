@@ -1,0 +1,45 @@
+.graphic__bar {
+    height: 24px;
+    background: #2F71E5;
+    margin-bottom: 56px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+.graphic__bar:last-child {
+    margin-bottom: 0px;
+}
+
+/* width будет меняться с помощью js*/
+
+.graphic__bar_percentaged-15 {
+    width: 15%;
+}
+.graphic__bar_percentaged-18 {
+    width: 18%;
+}
+.graphic__bar_percentaged-11 {
+    width: 11%;
+}
+.graphic__bar_percentaged-39 {
+    width: 39%;
+}
+
+.graphic__bar_percentaged-45 {
+    width: 45%;
+}
+.graphic__bar_percentaged-73 {
+    width: 73%;
+}
+.graphic__bar_percentaged-34 {
+    width: 34%;
+}
+
+
+@media screen and (max-width: 510px) {
+    .graphic__bar {
+        margin-bottom: 24px;
+    }
+}
+

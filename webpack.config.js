@@ -95,6 +95,12 @@ module.exports = {
             filename: 'about.html',
             favicon: './src/images/favicon.png'
         }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './src/analytics.html',
+            filename: 'analytics.html',
+            favicon: './src/images/favicon.png'
+        }),
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
