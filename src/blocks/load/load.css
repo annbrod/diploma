@@ -2,10 +2,13 @@
 @import url(./__preloader/load__preloader.css);
 
 .load {
-
-  display: flex;
   flex-direction: column;
   align-items: center;
 
   display: none;
+}
+
+
+.load_is-opened {
+  display: flex;
 }
