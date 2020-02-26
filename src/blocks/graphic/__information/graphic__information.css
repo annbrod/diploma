@@ -1,15 +1,15 @@
 @import url(./graphic__information_type_date.css);
 
 .graphic__information {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: normal;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
 
-    font-size: 12px;
-    line-height: 16px;
+  font-size: 12px;
+  line-height: 16px;
 
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
 
-    color: #B6BCBF;
+  color: #B6BCBF;
 }

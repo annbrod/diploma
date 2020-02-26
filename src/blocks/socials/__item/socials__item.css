@@ -1,7 +1,7 @@
 .socials__item {
-    margin-right: 28px;
+  margin-right: 28px;
 }
 
 .socials__item:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }

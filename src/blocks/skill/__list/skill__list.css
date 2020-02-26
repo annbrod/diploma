@@ -1,33 +1,33 @@
 .skill__list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;  
-    justify-content: space-between;
-    flex-basis: 50%;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 50%;
 
 }
 
 @media screen and (max-width: 1024px) {
-    .skill__list {
-        flex-basis: 100%;
-    }
+  .skill__list {
+    flex-basis: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .skill__list {
-        flex-wrap: wrap;
-        flex-basis: 90%;
-        margin: 0 auto;
-    }
+  .skill__list {
+    flex-wrap: wrap;
+    flex-basis: 90%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 510px) {
-    .skill__list {
-        padding-top: 24px;
-        flex-wrap: wrap;
-        flex-basis: 90%;
-        margin: 0 auto;
-        margin-bottom: -35px;
-    }
+  .skill__list {
+    padding-top: 24px;
+    flex-wrap: wrap;
+    flex-basis: 90%;
+    margin: 0 auto;
+    margin-bottom: -35px;
+  }
 }
 

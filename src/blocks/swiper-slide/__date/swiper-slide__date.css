@@ -1,14 +1,14 @@
 .swiper-slide__date {
-    font-size: 14px;
-    line-height: 22px;
-    color: #B6BCBF;
-    display: inline-block;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B6BCBF;
+  display: inline-block;
 
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 @media screen and (max-width: 510px) {
-    .swiper-slide__date {
-        margin-bottom: 10px;
-    }
+  .swiper-slide__date {
+      margin-bottom: 10px;
   }
+}

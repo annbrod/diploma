@@ -1,9 +1,9 @@
 .content-title_type_max-width {
-    max-width: unset;
+  max-width: unset;
 }
 
-@media screen and (max-width: 768px) {
-    .content-title_type_max-width {
-        max-width: 336px;
-    }
+@media screen and (max-width: 860px) {
+  .content-title_type_max-width {
+    max-width: 336px;
+  }
 }

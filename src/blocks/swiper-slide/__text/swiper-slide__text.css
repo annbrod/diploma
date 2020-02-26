@@ -1,4 +1,23 @@
 .swiper-slide__text {
-    font-size: 16px;
-    line-height: 22px;
+  font-size: 16px;
+  line-height: 22px;
+
+
+  max-height: 352px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+
+}
+
+@media screen and (max-width:768px) {
+  .swiper-slide__text {
+
+  max-height: 288px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  }
 }

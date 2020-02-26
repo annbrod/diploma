@@ -1,15 +1,15 @@
 .graphic__header {
+  width: 113px;
+}
+
+@media screen and (max-width: 768px) {
+  .graphic__header {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .graphic__header {
     width: 113px;
-}
-
-@media screen and (max-width: 768px) {
-    .graphic__header {
-        width: 140px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .graphic__header {
-        width: 113px;
-    }
+  }
 }

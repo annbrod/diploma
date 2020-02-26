@@ -1,17 +1,17 @@
 .git {
-    padding: 72px 0;
-    background: #F5F6F7;
+  padding: 72px 0;
+  background: #F5F6F7;
 }
 
-@media screen and (max-width: 768px) {
-    .git {
-        padding: 40px;
-    }
+@media screen and (max-width: 860px) {
+  .git {
+    padding: 40px;
+  }
 }
 
 
 @media screen and (max-width: 510px) {
-    .git {
-        padding: 32px 16px;
-    }
+  .git {
+    padding: 32px 16px;
+  }
 }

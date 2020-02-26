@@ -9,10 +9,10 @@
 @import url(../__link/nav__link_type_footer.css);
 
 .nav__list {
-    display: flex;
-    list-style-type: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
+  display: flex;
+  list-style-type: none;
+  margin-top: 0;
+
+  padding: 0;
 }
 

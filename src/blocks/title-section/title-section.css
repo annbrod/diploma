@@ -2,16 +2,16 @@
 @import url(./title-section_type_cards.css);
 
 .title-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
 @media screen and (max-width: 375px) {
-    .title-section {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .title-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

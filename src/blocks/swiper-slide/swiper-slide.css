@@ -10,19 +10,19 @@
 
 
 .swiper-slide {
-    display: block;
-    cursor: pointer;
-    flex-shrink: 0;
-    width: 400px;
-    height: 288px;
-    box-sizing: border-box;
-    position: relative;
-    transition-property: transform;
-    
-    padding: 24px;
-    background-color: #ffffff;
-    border-radius: 16px;
-    margin-right: 16px;
+  display: block;
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 400px;
+  height: 288px;
+  box-sizing: border-box;
+  position: relative;
+  transition-property: transform;
+
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  margin-right: 16px;
 }
 
 .swiper-slide:hover {

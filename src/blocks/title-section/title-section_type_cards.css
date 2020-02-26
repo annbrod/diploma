@@ -1,13 +1,13 @@
 
 
-@media screen and (max-width: 768px) {
-    .title-section_type_cards {
-        margin-bottom: 16px;
-    }
+@media screen and (max-width: 860px) {
+  .title-section_type_cards {
+    margin-bottom: 16px;
+  }
 }
 
 @media screen and (max-width: 375px) {
-    .title-section_type_cards {
-        margin-bottom: 24px;
-    }
+  .title-section_type_cards {
+    margin-bottom: 24px;
+  }
 }

@@ -1,18 +1,18 @@
 
 .description {
-    padding: 80px 104px 94px 104px;
+  padding: 80px 104px 94px 104px;
 }
 
 
-@media screen and (max-width: 768px) {
-    .description {
-        padding: 30px 40px 26px;
-    }
+@media screen and (max-width: 860px) {
+  .description {
+    padding: 30px 40px 26px;
+  }
 }
 
 
 @media screen and (max-width: 510px) {
-    .description {
-        padding: 16px;
-    }
+  .description {
+    padding: 16px;
+  }
 }

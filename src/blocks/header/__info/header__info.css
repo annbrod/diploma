@@ -2,20 +2,20 @@
 @import url(./header__info_theme_light.css);
 
 .header__info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 101px 26px 101px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 101px 26px 101px;
 }
 
-@media screen and (max-width: 768px) {
-    .header__info {
-        padding: 22px 42px 18px 40px;
-    }
+@media screen and (max-width: 860px) {
+  .header__info {
+    padding: 22px 42px 18px 40px;
+  }
 }
 
 @media screen and (max-width: 510px) {
-    .header__info {
-        padding: 16px;
-    }
+  .header__info {
+    padding: 16px;
+  }
 }

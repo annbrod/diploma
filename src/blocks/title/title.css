@@ -1,28 +1,28 @@
 .title {
-    font-family: Roboto Slab;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 64px;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 64px;
 
-    margin-top: 0;
-    margin-bottom: 32px;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 @media screen and (max-width: 768px) {
-    .title {
-        font-size: 36px;
-        line-height: 40px;
-        
-        margin-bottom: 16px;
-    }
+  .title {
+    font-size: 36px;
+    line-height: 40px;
+
+    margin-bottom: 16px;
+  }
 }
 
 @media screen and (max-width: 425px) {
-    .title {
-        font-size: 36px;
-        line-height: 40px;
-       
-        margin-bottom: 56px;
-    }
+  .title {
+    font-size: 36px;
+    line-height: 40px;
+
+    margin-bottom: 56px;
+  }
 }

@@ -1,23 +1,23 @@
 .author__image {
-    width: 464px;   
-    height: 464px;
-    border-radius: 1000px;
-    margin-right: 56px;
+  width: 464px;
+  height: 464px;
+  border-radius: 1000px;
+  margin-right: 56px;
 }
 
 @media screen and (max-width: 1024px) {
-    .author__image {
-        width: 232px;
-        height: 232px;
-        margin-right: 32px;
-    }
+  .author__image {
+    width: 232px;
+    height: 232px;
+    margin-right: 32px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .author__image {
-        width: 272px;
-        height: 272px;
-        margin-right: 0;
-        margin-bottom: 24px;
-    }
+  .author__image {
+    width: 272px;
+    height: 272px;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
 }

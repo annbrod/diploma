@@ -2,16 +2,16 @@
 @import url(./__item/socials__item.css);
 
 .socials {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
 }
 
 @media screen and (max-width: 670px) {
-    .socials {
-        position: absolute;
-        right: 16px;
-        top: 20px;
-    }
+  .socials {
+    position: absolute;
+    right: 16px;
+    top: 20px;
+  }
 }

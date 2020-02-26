@@ -1,17 +1,29 @@
 .card__text {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    height: 110px;
-    overflow-y: hidden;
-    margin-top: 0;
-    margin-bottom: 18px;
-    /*В JS нужно будет ограниить кол-во строк*/
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  height: 110px;
+  overflow-y: hidden;
+  margin-top: 0;
+  margin-bottom: 18px;
+
+
+  /*Ограничение кол-ва строк*/
+  height: 110px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+
 }
 
-@media screen and (max-width: 768px) {
-    .card__text {
-        height: 88px;
-    }
+@media screen and (max-width: 1024px) {
+  .card__text {
+    height: 88px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
 }

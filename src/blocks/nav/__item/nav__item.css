@@ -1,17 +1,17 @@
 @import url(./nav__item_type_footer.css);
 
 .nav__item {
-    margin-right: 34px;
+  margin-right: 34px;
 }
 
 .nav__item:last-child {
-    margin-right: 0px;
-    margin-bottom: 0;
+  margin-right: 0px;
+  margin-bottom: 0;
 }
 
 
 @media screen and (max-width: 510px) {
-    .nav__item {
-        margin-right: 11px;
-    }
+  .nav__item {
+    margin-right: 11px;
+  }
 }

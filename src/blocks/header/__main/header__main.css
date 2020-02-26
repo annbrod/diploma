@@ -1,23 +1,23 @@
 .header__main {
-    padding: 80px 160px;
-    max-width: 608px;
-    margin: 0 auto;
+  padding: 80px 160px;
+  max-width: 608px;
+  margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
-    .header__main {
-        padding: 40px 156px 48px 160px;
-    }
+@media screen and (max-width: 860px) {
+  .header__main {
+    padding: 40px 156px 48px 160px;
+  }
 }
 
 @media screen and (max-width: 750px) {
-    .header__main {
-        padding: 40px;
-    }
+  .header__main {
+    padding: 40px;
+  }
 }
 
 @media screen and (max-width: 4250px) {
-    .header__main {
-        padding: 32px 16px;
-    }
+  .header__main {
+    padding: 32px 16px;
+  }
 }

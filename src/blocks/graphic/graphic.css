@@ -4,31 +4,29 @@
 @import url(./__date/graphic__date.css);
 @import url(./__result/graphic__result.css);
 @import url(./__bar/graphic__bar.css);
-@import url(./__day/graphic__day.css);
 @import url(./__information/graphic__information.css);
 @import url(./__text/graphic__text.css);
-@import url(./__week-day/graphic__week-day.css);
 @import url(./__axis/graphic__axis.css);
 
 
 .graphic {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 
-    position: relative;
+  position: relative;
 }
 
 .graphic:before {
-    content: '';
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 56px;
-    border-bottom: 1px solid #1A1B22;
+  content: '';
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 56px;
+  border-bottom: 1px solid #1A1B22;
 }
 
 @media screen and (max-width: 510px) {
-    .graphic:before {
-        top: 52px;
-    }
+  .graphic:before {
+      top: 52px;
+  }
 }

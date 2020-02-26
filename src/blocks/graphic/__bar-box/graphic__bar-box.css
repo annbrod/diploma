@@ -1,13 +1,13 @@
 .graphic__bar-box {
-    list-style: none;
-    padding: 0;
-    padding-top: 57px;
+  list-style: none;
+  padding: 0;
+  padding-top: 57px;
 }
 
 
 
 @media screen and (max-width: 510px) {
-    .graphic__bar-box {
-        padding-top: 26px;
-    }
+  .graphic__bar-box {
+    padding-top: 26px;
+  }
 }

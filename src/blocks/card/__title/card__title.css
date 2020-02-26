@@ -1,33 +1,27 @@
 .card__title {
-    font-family: Roboto Slab, Arial, Helvetica, sans-serif;;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 30px;
+  font-family: Roboto Slab, Arial, Helvetica, sans-serif;;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
 
-    margin-top: 0;
-    margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 16px;
 
 }
 
-@media screen and (max-width: 768px) {
-    .card__title {
-        font-size: 22px;
-        line-height: 24px;
-        margin-bottom: 10px;
+@media screen and (max-width: 1000px) {
+  .card__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
 
-        height: 72px;
-        overflow-y: hidden;
-        /*JS - ограничение строк*/ 
-    }
-}
+    max-height: 72px;
 
-@media screen and (max-width: 768px) {
-    .card__title {
-        font-size: 22px;
-        line-height: 26px;
-        height: 52px;
-        overflow-y: hidden;
-        /*JS - ограничение строк*/ 
-    }
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+
+  }
 }

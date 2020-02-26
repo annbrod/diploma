@@ -1,15 +1,15 @@
-@import url(./__image/logo__image.css);
+
 @import url(./__image/logo__image_theme_light.css);
 
 .logo {
-    display: block;
-    width: 138px;
-    height: 15px;
+  display: block;
+  width: 138px;
+  height: 15px;
 }
 
 @media screen and (max-width: 510px) {
-    .logo {
-        width: 117px;
-        height: 18px;
-    }
+  .logo {
+      width: 117px;
+      height: 18px;
+  }
 }

@@ -1,22 +1,22 @@
 .lead {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
 
-    margin-top: 0;
-    margin-bottom: 64px;
+  margin-top: 0;
+  margin-bottom: 64px;
 }
 
 @media screen and (max-width: 768px) {
-    .lead {
-        margin-bottom: 24px;
-    }
+  .lead {
+    margin-bottom: 24px;
+  }
 }
 
 @media screen and (max-width: 425px) {
-    .lead {
-        font-size: 20px;
-        line-height: 26px;
-    }
+  .lead {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

@@ -1,24 +1,23 @@
 @import url(./graphic__axis_type_top.css);
-@import url(./graphic__axis_type_bottom.css);
 
 .graphic__axis {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
 
-    font-size: 12px;
-    line-height: 16px;
+  font-size: 12px;
+  line-height: 16px;
 
-    text-align: center;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
 
-    color: #B6BCBF;
+  color: #B6BCBF;
 }
 
 @media screen and (max-width: 510px) {
-    .graphic__axis {
-       display: none;
-    }
+  .graphic__axis {
+    display: none;
+  }
 }
