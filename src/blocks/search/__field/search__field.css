@@ -16,6 +16,10 @@
   line-height: 22px;
 }
 
+.search__field:focus {
+  box-shadow: inset 0px 0px 5px 0px lightslategrey;
+}
+
 .search__field::placeholder {
   color: #B6BCBF;
 }
