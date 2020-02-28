@@ -29,9 +29,22 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-          'css-loader',
-          'postcss-loader'
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: { publicPath: '../', }
+          },
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: __dirname + '/postcss.config.js'
+              }
+            },
+          },
         ]
       },
       {
@@ -70,13 +83,13 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./vendor/[name].[ext]'
+        loader: 'file-loader?name=./vendor/[name].[ext]',
       }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './style/[name].[contenthash].css'
+      filename: './pages/[name].[contenthash].css'
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
