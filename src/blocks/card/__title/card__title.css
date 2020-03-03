@@ -1,5 +1,5 @@
 .card__title {
-  font-family: Roboto Slab, Arial, Helvetica, sans-serif;;
+  font-family: Roboto Slab, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 26px;
@@ -7,6 +7,11 @@
 
   margin-top: 0;
   margin-bottom: 16px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 
 }
 
@@ -18,10 +23,7 @@
 
     max-height: 72px;
 
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
+
 
   }
 }
