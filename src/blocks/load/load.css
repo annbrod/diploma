@@ -1,5 +1,6 @@
 @import url(./__text/load__text.css);
 @import url(./__preloader/load__preloader.css);
+@import url(./load_is-opened.css);
 
 .load {
   flex-direction: column;
@@ -9,6 +10,4 @@
 }
 
 
-.load_is-opened {
-  display: flex;
-}
+

@@ -1,6 +1,7 @@
 @import url(../button/button_type_search.css);
 @import url(../button/button_type_more.css);
 @import url(../button/button_type_git.css);
+@import url(./button_is-hidden.css);
 
 .button {
 

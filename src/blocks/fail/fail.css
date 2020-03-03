@@ -1,12 +1,10 @@
 @import url(./__image/fail__image.css);
 @import url(./__title/fail__title.css);
 @import url(./__text/fail__text.css);
+@import url(./fail_is-opened.css);
 
 .fail {
   text-align: center;
   display: none;
 }
 
-.fail_is-opened {
-  display: block;
-}

@@ -1,4 +1,4 @@
-import "./pages/about.css";
+import "./pages/about/about.css";
 
 
 import Swiper from 'swiper';
