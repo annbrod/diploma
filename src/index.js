@@ -113,11 +113,16 @@ class NewsCard {
   }
   //Создает шаблон карточки
   create(urlToImage, publishedAt, title, description, source) {
+<<<<<<< HEAD
     //Приводит дату к нужному формату
     this.date = publishedAt
     this.date = new Date(this.date).toLocaleString("ru", { day: "numeric", year: 'numeric', month: 'long' });
 
     //Создает разметку карточки
+=======
+    this.date = publishedAt
+    this.date = new Date(this.date).toLocaleString("ru", { day: "numeric", year: 'numeric', month: 'long' });
+>>>>>>> 83547a60833786aa0461cedc156f5042e3c1f43f
     return `<article class="card">
     <div class="card__image" style="background-image: url(${urlToImage});"></div>
     <div class="card__description">
@@ -134,27 +139,43 @@ class NewsCard {
 
 
 class NewsCardList {
+<<<<<<< HEAD
   //передаём  шаблон карточки
   constructor(container, cardElement) {
+=======
+  constructor(container, cardElement) { //передаём  шаблон карточки
+>>>>>>> 83547a60833786aa0461cedc156f5042e3c1f43f
     this.container = container;
     this.cardElement = cardElement;
     this.count = 0;
     this.cardsNumber = 0;
   }
 
+<<<<<<< HEAD
   //Создаёт карточку
   addCard(urlToImage, publishedAt, title, description, source, word) {
     //из шаблона делаем DOM-элемент
     const card = this.cardElement.create(urlToImage, publishedAt, title, description, source);
     //добавляем карточку в cardList
     this.container.insertAdjacentHTML("beforeend", card);
+=======
+  //создаёт карточку
+  addCard(urlToImage, publishedAt, title, description, source, word) {
+    const card = this.cardElement.create(urlToImage, publishedAt, title, description, source); //из шаблона делаем DOM-элемент
+    this.container.insertAdjacentHTML("beforeend", card); //добавляем карточку в cardList
+>>>>>>> 83547a60833786aa0461cedc156f5042e3c1f43f
     this.word = word;
   }
 
   //Добавляет первые три (или меньше) карточек
   renderInitial(cards, word) {
     this.word = word;
+<<<<<<< HEAD
     this.total = 0;
+=======
+    while (this.container.firstChild) this.container.removeChild(this.container.firstChild);
+    this.num = 0;
+>>>>>>> 83547a60833786aa0461cedc156f5042e3c1f43f
     this.cardsSum = cards.length;
     this.cards = cards;
     this.render();
@@ -162,29 +183,50 @@ class NewsCardList {
 
   //Добавляет карточки по нажатию "Показать ещё"
   render() {
+<<<<<<< HEAD
     moreButton.classList.remove("button_is-hidden")
     //загружаем по три карточки
     for (let i = this.total; i < this.total + 3; i++) {
       if (i >= this.cardsSum) {
         moreButton.classList.add("button_is-hidden")
+=======
+    document.querySelector(".button_type_more").classList.remove("button_is-hidden")
+    //загружаем по три карточки
+    for (let i = this.num; i < this.num + 3; i++) {
+      if (i >= this.cardsSum) {
+        document.querySelector(".button_type_more").classList.add("button_is-hidden")
+>>>>>>> 83547a60833786aa0461cedc156f5042e3c1f43f
         if (i = this.cardsSum) {
           return;
         }
       }
+<<<<<<< HEAD
       //Для каждой карточки:
       const card = this.cards[i];
       this.addCard(card.urlToImage, card.publishedAt, card.title, card.description, card.source, this.word);
     }
     //Прибавляем к итоговой сумме по три каждую итерацию
     this.total += 3;
+=======
+      const card = this.cards[i];
+      this.addCard(card.urlToImage, card.publishedAt, card.title, card.description, card.source, this.word);
+    }
+    this.num = this.num + 3;
+>>>>>>> 83547a60833786aa0461cedc156f5042e3c1f43f
   }
 
   //Очищает список карточек
   clear() {
+<<<<<<< HEAD
     while (this.container.firstChild) {
       this.container.removeChild(this.container.firstChild)
     }
     this.total = 0;
+=======
+    while (this.container.firstChild) this.container.removeChild(this.container.firstChild);
+    this.num = 0;
+    this.articlesNumber = 0;
+>>>>>>> 83547a60833786aa0461cedc156f5042e3c1f43f
   }
 
 }
