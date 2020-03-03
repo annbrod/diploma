@@ -1,0 +1,13 @@
+.text__paragraph {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.text__paragraph:last-child {
+  margin-bottom: 0;
+}

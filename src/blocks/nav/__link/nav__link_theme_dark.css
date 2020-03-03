@@ -1,0 +1,17 @@
+.nav__link_theme_dark {
+  color: #B6BCBF;
+}
+
+.nav__link_theme_dark.nav__link_checked {
+  color: #FFFFFF;
+}
+
+.nav__link_theme_dark:hover {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+
+.nav__link_theme_dark::after {
+  background-color: #FFFFFF;
+}

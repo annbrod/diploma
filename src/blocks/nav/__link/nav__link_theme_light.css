@@ -1,0 +1,19 @@
+.nav__link_theme_light{
+  color: #B6BCBF;
+
+}
+
+.nav__link_theme_light:hover{
+  color: #1A1B22;
+  font-weight: 500;
+}
+
+.nav__link_theme_light.nav__link_checked{
+  color: #1A1B22;
+
+}
+
+.nav__link_theme_light::after {
+  color: #1A1B22;
+  background-color: #1A1B22;
+}

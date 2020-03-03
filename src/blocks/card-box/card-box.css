@@ -1,0 +1,7 @@
+@import url(./card-box_type_news.css);
+
+.card-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

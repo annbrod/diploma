@@ -1,0 +1,14 @@
+.skill__name {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+@media screen and (max-width: 510px) {
+  .skill__name {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,12 @@
+.fail__title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  /* identical to box height, or 115% */
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: center;
+
+}

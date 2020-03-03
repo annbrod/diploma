@@ -1,0 +1,21 @@
+.button_type_more {
+  border: none;
+  border-radius: 100px;
+  margin: 0 auto;
+  padding-left: 84px;
+  padding-right: 84px;
+  background: #FFFFFF;
+}
+
+.button_type_more:hover,
+.button_type_more:active {
+  background: #e8e8e9
+
+}
+
+@media screen and (max-width: 768px) {
+  .button_type_more {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}

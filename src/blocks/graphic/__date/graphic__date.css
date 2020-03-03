@@ -1,0 +1,12 @@
+.graphic__date {
+  font-size: 18px;
+  line-height: 80px;
+}
+
+@media screen and (max-width: 510px) {
+  .graphic__date {
+    font-size: 18px;
+    line-height: 48px;
+  }
+}
+

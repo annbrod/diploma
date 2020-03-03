@@ -1,0 +1,18 @@
+.card-box_type_news {
+  margin-bottom: 48px;
+  margin-left: -16px;
+}
+
+@media screen and (max-width: 768px) {
+  .card-box_type_news {
+    margin-left: -8px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-box_type_news {
+    margin: 0;
+    margin-bottom: 0px;
+  }
+}

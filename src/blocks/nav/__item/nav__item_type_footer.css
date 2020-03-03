@@ -1,0 +1,5 @@
+@media screen and (max-width: 510px) {
+  .nav__item_type_footer {
+    margin-bottom: 25px;
+  }
+}

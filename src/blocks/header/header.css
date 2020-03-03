@@ -1,0 +1,7 @@
+@import url(./__info/header__info.css);
+@import url(./__main/header__main.css);
+@import url(./header_type_home.css);
+
+.header {
+  color: #FFFFFF;
+}
