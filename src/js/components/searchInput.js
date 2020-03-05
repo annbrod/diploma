@@ -32,8 +32,16 @@ export default class SearchInput {
     this.newsApi.getNews(searchInput.value, dateFrom, dateTo)
       .then(res => {
         //Если карточки есть
+        console.log(res)
         if (res.articles.length) {
+          //Очищаем хранилище от предыдущих карточек и keyword
+          localStorage.clear();
           console.log(res);
+          //Сохраняем в локальное хранилище
+          console.log(searchInput.value.toString());
+          localStorage.setItem('word', searchInput.value);
+          let cardsObj = JSON.stringify(res.articles);
+          localStorage.setItem('cards', cardsObj);
           this.newsApi.getNews(searchInput.value, dateFrom, dateTo)
 
             .then(res => {

@@ -12,5 +12,7 @@ export const ERROR_MESSAGES = {
 };
 
 //столько миллисекунд в неделе
-export const WEEK_IN_MILLISECONDS = 604800000
+export const WEEK_IN_MILLISECONDS = 604800000;
+
+export const DAY_IN_MILLISECONDS = 86400000;
 

@@ -28,6 +28,10 @@ const card = new NewsCard(newsApi);
 const cardList = new NewsCardList(document.querySelector(".card-box_type_news"), card);
 const input = new SearchInput(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection);
 
+
+
+
+
 //Слушатели
 
 //слушатель кнопки Показать еще

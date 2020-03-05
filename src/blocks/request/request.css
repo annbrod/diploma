@@ -1,5 +1,6 @@
 @import url(./__result/request__result.css);
 @import url(./__value/request__value.css);
+@import url(./__word/request__word.css);
 
 .request {
   padding: 40px 104px 80px;
