@@ -1,15 +1,16 @@
 
 
 export default class SearchInput {
-  constructor(errors, card, cardList, results, loading, newsApi, fail, titleSection) {
-    this.errors = errors
-    this.card = card
+  constructor(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton) {
+    this.errors = ERROR_MESSAGES;
+    this.card = card;
     this.cardList = cardList;
     this.results = results;
     this.loading = loading;
     this.newsApi = newsApi;
     this.fail = fail;
     this.titleSection = titleSection;
+    this.moreButton = moreButton;
   }
 
   submit(event, dateTo, dateFrom) {
@@ -18,10 +19,8 @@ export default class SearchInput {
     const searchForm = document.forms.form;
     const searchInput = searchForm.elements.search;
     //Очищает список от предыдущих результатов, если есть
-    const moreButton = document.querySelector('.button_type_more');
-    console.log(moreButton)
-    moreButton.classList.add("button_is-hidden")
     this.cardList.clear()
+    this.moreButton.classList.add("button_is-hidden")
     this.fail.classList.remove("fail_is-opened");
     this.titleSection.classList.remove("title-section_is-opened");
     //Показывает блок результатов
@@ -58,7 +57,7 @@ export default class SearchInput {
               this.loading.classList.remove("load_is-opened");
               this.titleSection.classList.remove("title-section_is-opened");
               this.results.classList.add("results_is-opened");
-              this.results.textContent = ERROR_MESSAGES.serverError
+              this.results.textContent = this.errors.serverError
               console.log(err)
             })
 
@@ -77,7 +76,7 @@ export default class SearchInput {
         this.loading.classList.remove("load_is-opened");
         this.titleSection.classList.remove("title-section_is-opened");
         this.results.classList.add("results_is-opened");
-        this.results.textContent = ERROR_MESSAGES.serverError
+        this.results.textContent = this.errors.serverError
         console.log(err);
       })
   }

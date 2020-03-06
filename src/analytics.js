@@ -1,10 +1,7 @@
 import "./pages/analytics/analytics.css";
-import { WEEK_IN_MILLISECONDS } from "./js/constants/constants";
 import { DAY_IN_MILLISECONDS } from "./js/constants/constants";
 
 let returnCardsObj = JSON.parse(localStorage.getItem("cards"))
-
-
 let returnWord = localStorage.getItem("word");
 
 
@@ -17,13 +14,18 @@ const newsPerWeek = document.querySelector(".request__value_type_per-week");
 newsPerWeek.textContent = returnCardsObj.length
 
 
+const dateCurrent = new Date();
+
+
 // Сколько раз встречается ключевое слово в заголовках за неделю
 let totalInTitle = 0;
 returnCardsObj.forEach(function (item, i) {
-  if (returnCardsObj[i].title.includes(returnWord)) {
-    totalInTitle = totalInTitle + 1;
+  if (returnCardsObj[i].title) {
+    if (returnCardsObj[i].title.includes(returnWord)) {
+      totalInTitle = totalInTitle + 1;
+    }
+    return totalInTitle;
   }
-  return totalInTitle;
 });
 
 
@@ -34,20 +36,13 @@ keywordInTitle.textContent = totalInTitle;
 // Сколько раз встречается ключевое слово в тексте
 let totalInText = 0;
 returnCardsObj.forEach(function (item, i) {
-  if (returnCardsObj[i].description.includes(returnWord)) {
-    totalInText = totalInText + 1;
+  if (returnCardsObj[i].description) {
+    if (returnCardsObj[i].description.includes(returnWord)) {
+      totalInText = totalInText + 1;
+    }
+    return totalInText;
   }
-  return totalInText;
 });
-
-//и в тексте, и в заголовках
-let total = totalInText + totalInTitle;
-
-//По дням
-
-const dateCurrent = new Date()
-
-
 
 
 //Cобирает массив из всех нужных дат
@@ -59,7 +54,6 @@ function add(dates) {
 };
 add(dates)
 
-console.log(dates)
 
 //Приводит даты к нужному формату
 
@@ -79,25 +73,34 @@ graphicDates.forEach(function (i, item) {
   i.textContent = datesShort[item];
 });
 
+//У всех полученных карточек форматирует дату для сравнения
 
 returnCardsObj.forEach(function (item, i) {
   item.publishedAt = new Date(item.publishedAt)
 });
 
 
-returnCardsObj = returnCardsObj.map(function (item) {
+let cardsObjDates = returnCardsObj.map(function (item) {
   item.publishedAt = `${item.publishedAt.toLocaleString("ru", { day: "numeric" })}, ${item.publishedAt.toLocaleString("ru", { weekday: 'short' })}`
   return item.publishedAt
 })
 
-console.log(returnCardsObj)
+
 
 const barsTexts = document.querySelectorAll(".graphic__text");
 const bars = document.querySelectorAll(".graphic__bar");
 
-let a = returnCardsObj.filter(function (item) {
-  return item === datesShort[0]
-})
-console.log(a);
-barsTexts[0].textContent = a.length;
-bars[0].style.width = `${a.length}%`
+//Разбивает статьи на 7 баров
+
+function addCardsToBars() {
+  for (let i = 0; i < 7; i++) {
+
+    let a = cardsObjDates.filter(function (item) {
+      return item === datesShort[i]
+    })
+
+    barsTexts[i].textContent = a.length;
+    bars[i].style.width = `${a.length}%`;
+  }
+}
+addCardsToBars();

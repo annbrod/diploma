@@ -7,6 +7,7 @@ import NewsCard from "./js/components/NewsCard";
 import NewsCardList from "./js/components/NewsCardList";
 import SearchInput from "./js/components/SearchInput";
 
+
 const searchForm = document.forms.form;
 const results = document.querySelector(".results");
 const fail = results.querySelector(".fail")
@@ -14,6 +15,8 @@ const resultsNews = results.querySelector(".card-box_type_news")
 const loading = results.querySelector(".load")
 const moreButton = results.querySelector(".button_type_more");
 const titleSection = results.querySelector(".title-section_type_cards");
+
+
 
 const dateCurrent = new Date()
 // Получаем дату, котора была неделю назад
@@ -26,8 +29,7 @@ const dateFrom = `${weekAgo.getFullYear()}-${weekAgo.getMonth() + 1}-${weekAgo.g
 const newsApi = new NewsApi(NEWS_API_CONFIG);
 const card = new NewsCard(newsApi);
 const cardList = new NewsCardList(document.querySelector(".card-box_type_news"), card);
-const input = new SearchInput(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection);
-
+const input = new SearchInput(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton);
 
 
 
