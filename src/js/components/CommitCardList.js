@@ -12,20 +12,25 @@ export default class CommitCardList {
     const card = this.cardElement.create(commit, author);
     //добавляем слайдер в CommitCardList
     this.container.insertAdjacentHTML("beforeend", card);
-    this.word = word;
   }
 
 
   render() {
 
-    const res = this.api
-      .getCommits();
-    console.log(this.api
-      .getCommits())
+    this.api
+      .getCommits()
+      .then(res => {
+        console.log(res)
 
-    res.forEach(res => {
-      this.addCard(res.commit, res.author);
-    })
+        res.forEach(res => {
+          this.addCard(res.commit, res.author);
+        })
+        console.log(res)
+      })
+
+
+
+
 
 
 

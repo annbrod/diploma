@@ -12,7 +12,7 @@ export default class CommitCard {
     return `  <div class="swiper-slide">
     <span class="swiper-slide__date">${this.date}</span>
     <div class="swiper-slide__info">
-      <div class="swiper-slide__image" style="background-image: url(${author.avatar_url});"><div>
+      <div class="swiper-slide__image" style="background-image: url();"><div>
       <div class="swiper-slide__contacts">
         <p class="swiper-slide__name">${commit.committer.name}</p>
         <p class="swiper-slide__email">${commit.committer.email}</p>
