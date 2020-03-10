@@ -1,20 +1,23 @@
 export default class GithubApi {
-  constructor({ url, headers }) {
+  constructor({ url }) {
     this.url = url;
-    this.headers = headers;
+
   }
 
   getCommits() {
 
-    return fetch(`${this.url}`, {
-      headers: this.headers
-    })
+    return fetch(`${this.url}`)
       .then(res => {
+        console.log(res)
         if (!res.ok) {
 
           return Promise.reject(`Ошибка: ${res.status}`);
         }
         return res.json();
+      })
+      .then(res => {
+        console.log(res)
+        return res;
       })
   }
 }
