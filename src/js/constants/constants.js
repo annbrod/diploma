@@ -6,6 +6,11 @@ export const NEWS_API_CONFIG = {
   pageSize: 100,
 }
 
+export const GITHUB_API_CONFIG = {
+  url: 'https://api.github.com/repos/annbrod/diploma/commits',
+  headers: { 'Content-Type': 'application/json' },
+}
+
 export const ERROR_MESSAGES = {
   serverError: 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.',
   emptyField: 'Нужно ввести ключевое слово'

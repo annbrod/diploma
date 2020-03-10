@@ -4,7 +4,6 @@ export default class NewsCardList {
     this.container = container;
     this.cardElement = cardElement;
     this.count = 0;
-    this.cardsNumber = 0;
   }
 
   //Создаёт карточку

@@ -1,7 +1,10 @@
 import "./pages/about/about.css";
+import "./js/modules/GithubApi";
+import { GITHUB_API_CONFIG } from "./js/constants/constants";
 
 
 import Swiper from 'swiper';
+import GithubApi from "./js/modules/GithubApi";
 
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 'auto',
@@ -20,6 +23,7 @@ var swiper = new Swiper('.swiper-container', {
   },
 });
 
-
+const githubApi = new GithubApi(GITHUB_API_CONFIG);
+githubApi.getCommits();
 
 
