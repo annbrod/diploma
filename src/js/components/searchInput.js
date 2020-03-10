@@ -21,13 +21,14 @@ export default class SearchInput {
     const searchInput = searchForm.elements.search;
     //Очищает список от предыдущих результатов, если есть
     this.cardList.clear()
-    this.moreButton.classList.add("button_is-hidden")
     this.fail.classList.remove("fail_is-opened");
     this.titleSection.classList.remove("title-section_is-opened");
     //Показывает блок результатов
     this.results.classList.add("results_is-opened");
     //Показывает блок прелоудера
     this.loading.classList.add("load_is-opened");
+    //Прячет кнопку 'Показать еще'
+    this.moreButton.classList.add("button_is-hidden")
     //Добавляет карточки
     this.newsApi.getNews(searchInput.value, dateFrom, dateTo)
       .then(res => {

@@ -24,7 +24,7 @@ newsPerWeek.textContent = returnCardsObj.length
 let totalInTitle = 0;
 returnCardsObj.forEach(function (item, i) {
   if (returnCardsObj[i].title) {
-    if (returnCardsObj[i].title.includes(returnWord)) {
+    if (returnCardsObj[i].title.toLowerCase().includes(returnWord.toLowerCase())) {
       totalInTitle = totalInTitle + 1;
     }
     return totalInTitle;
@@ -40,7 +40,7 @@ keywordInTitle.textContent = totalInTitle;
 let totalInText = 0;
 returnCardsObj.forEach(function (item, i) {
   if (returnCardsObj[i].description) {
-    if (returnCardsObj[i].description.includes(returnWord)) {
+    if (returnCardsObj[i].description.toLowerCase().includes(returnWord.toLowerCase())) {
       totalInText = totalInText + 1;
     }
     return totalInText;
