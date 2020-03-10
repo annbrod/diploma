@@ -3,9 +3,11 @@ import { ERROR_MESSAGES } from "./js/constants/constants";
 import { NEWS_API_CONFIG } from "./js/constants/constants";
 import { WEEK_IN_MILLISECONDS } from "./js/constants/constants";
 import NewsApi from "./js/modules/NewsApi"
+import DataStorage from "./js/modules/DataStorage";
 import NewsCard from "./js/components/NewsCard";
 import NewsCardList from "./js/components/NewsCardList";
 import SearchInput from "./js/components/SearchInput";
+
 
 
 const searchForm = document.forms.form;
@@ -29,10 +31,11 @@ const dateFrom = `${weekAgo.getFullYear()}-${weekAgo.getMonth() + 1}-${weekAgo.g
 const newsApi = new NewsApi(NEWS_API_CONFIG);
 const card = new NewsCard(newsApi);
 const cardList = new NewsCardList(document.querySelector(".card-box_type_news"), card);
-const input = new SearchInput(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton);
+const dataStorage = new DataStorage(localStorage);
+const input = new SearchInput(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton, dataStorage);
 
 
-
+console.log(dataStorage)
 
 //Слушатели
 
@@ -53,3 +56,6 @@ searchForm.addEventListener("input", event => {
 searchForm.addEventListener("click", event => {
   input.validate(event)
 });
+
+
+

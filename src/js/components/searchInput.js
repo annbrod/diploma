@@ -1,7 +1,7 @@
 
 
 export default class SearchInput {
-  constructor(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton) {
+  constructor(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton, dataStorage) {
     this.errors = ERROR_MESSAGES;
     this.card = card;
     this.cardList = cardList;
@@ -11,6 +11,7 @@ export default class SearchInput {
     this.fail = fail;
     this.titleSection = titleSection;
     this.moreButton = moreButton;
+    this.dataStorage = dataStorage;
   }
 
   submit(event, dateTo, dateFrom) {
@@ -34,13 +35,13 @@ export default class SearchInput {
         console.log(res)
         if (res.articles.length) {
           //Очищаем хранилище от предыдущих карточек и keyword
-          localStorage.clear();
+          this.dataStorage.clear();
           console.log(res);
           //Сохраняем в локальное хранилище
           console.log(searchInput.value.toString());
-          localStorage.setItem('word', searchInput.value);
+          this.dataStorage.set('word', searchInput.value);
           let cardsObj = JSON.stringify(res.articles);
-          localStorage.setItem('cards', cardsObj);
+          this.dataStorage.set('cards', cardsObj);
           this.newsApi.getNews(searchInput.value, dateFrom, dateTo)
 
             .then(res => {
