@@ -9,7 +9,7 @@
   <meta name="author" content="Туласова Анастасия">
   <title>Что в мире творится?</title>
   <link rel="shortcut icon" href="favicon.png" type="image/png">
-  <link rel="stylesheet" href="./pages/main.f0dec563747e8d6dc68e.css">
+  <link rel="stylesheet" href="./pages/main.ee369d838584b699eb8b.css">
 </head>
 
 <body class="root">
@@ -39,122 +39,39 @@
         Введите в поиске любую тему и узнайте, насколько популярной она
         была в новостях за прошедшую неделю.
       </p>
-      <form class="search">
+      <form class="search" name="form" novalidate>
         <input class="search__field" type="text" name="search" placeholder="Введите тему новости" required>
-        <button class="button button_type_search" type="submit">Искать</button>
+        <p id="error-search" class="search__error"></p>
+        <button class="button button_type_search" name="submit" type="submit">Искать</button>
       </form>
     </section>
   </header>
 
   <main class="page">
+    <!-- добавить модификатор _is-opened чтобы отобразить -->
     <section class="results">
+
+      <!-- добавить модификатор _is-opened чтобы отобразить -->
       <section class="load">
         <i class="load__preloader"></i>
         <p class="load__text">Идет поиск новостей...</p>
       </section>
+      <!-- добавить модификатор _is-opened чтобы отобразить -->
       <section class="fail">
         <img class="fail__image" src="./images/not-found.svg" alt="Ничего не найдено">
         <h2 class="fail__title">Ничего не найдено</h2>
         <p class="fail__text">К сожалению по вашему запросу ничего не найдено.</p>
       </section>
+      <!-- добавить модификатор _is-opened чтобы отобразить -->
       <div class="title-section title-section_type_cards">
-        <h2 class="content-title">Результаты поиска</h2>
+        <h2 class=" content-title">Результаты поиска</h2>
         <a href="analytics.html" class="link">Посмотреть аналитику</a>
       </div>
       <section class="card-box card-box_type_news">
 
-        <article class="card">
-          <img class="card__image" src="./images/card1.jpg" alt="Национальное достояние – парки">
-          <div class="card__description">
-            <p class="card__date">2 августа, 2019<p>
-                <h3 class="card__title">Национальное достояние – парки</h3>
-                <p class="card__text">
-                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                  складываться система национальных парков – охраняемых территорий, где и сегодня
-                  каждый
-                  может приобщиться к природе.
-                </p>
-                <p class="card__source">Лента.ру</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="card__image" src="./images/card2.jpg"
-            alt="Лесные огоньки: история одной фотографии">
-          <div class="card__description">
-            <p class="card__date">2 августа, 2019<p>
-                <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
-                <p class="card__text">
-                  Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
-                  запечатлеть ускользающую красоту одного из местных чудес природы.
-                </p>
-                <p class="card__source">Медуза</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="card__image" src="./images/card3.jpg"
-            alt="«Первозданная тайга»: новый фотопроект Игоря Шпиленка">
-          <div class="card__description">
-            <p class="card__date">2 августа, 2019<p>
-                <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                <p class="card__text">
-                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
-                  необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу,
-                  где...
-                </p>
-                <p class="card__source">Риа</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="card__image" src="./images/card4.jpg" alt="Национальное достояние – парки">
-          <div class="card__description">
-            <p class="card__date">2 августа, 2019<p>
-                <h3 class="card__title">Национальное достояние – парки</h3>
-                <p class="card__text">
-                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                  складываться система национальных парков – охраняемых территорий, где и сегодня
-                  каждый
-                  может приобщиться к природе.
-                </p>
-                <p class="card__source">Лента.ру</p>
-          </div>
-        </article>
-
-
-        <article class="card">
-          <img class="card__image" src="./images/card2.jpg"
-            alt="Лесные огоньки: история одной фотографии">
-          <div class="card__description">
-            <p class="card__date">2 августа, 2019<p>
-                <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
-                <p class="card__text">
-                  Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
-                  запечатлеть ускользающую красоту одного из местных чудес природы.
-                </p>
-                <p class="card__source">Медуза</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="card__image" src="./images/card3.jpg"
-            alt="«Первозданная тайга»: новый фотопроект Игоря Шпиленка">
-          <div class="card__description">
-            <p class="card__date">2 августа, 2019<p>
-                <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                <p class="card__text">
-                  Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
-                  необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу,
-                  где...
-                </p>
-                <p class="card__source">Риа</p>
-          </div>
-        </article>
-
       </section>
 
-      <button class="button button_type_more">Показать еще</button>
+      <button class="button button_type_more button_is-hidden">Показать еще</button>
     </section>
 
     <section class="author">
@@ -215,7 +132,7 @@
     </ul>
   </footer>
 
-  <script src="main.7b55ab9bc8b1bedf91d1.js"></script>
+  <script src="main.a540598c6e429b870c7b.js"></script>
 </body>
 
 </html>
