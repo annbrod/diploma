@@ -14,5 +14,8 @@ export default class NewsApi {
         }
         return res.json();
       })
+      .catch(err =>
+        console.log(err)
+      )
   }
 }

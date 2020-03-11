@@ -23,7 +23,7 @@ const titleSection = results.querySelector(".title-section_type_cards");
 const dateCurrent = new Date()
 // Получаем дату, котора была неделю назад
 const weekAgo = new Date(dateCurrent - WEEK_IN_MILLISECONDS)
-//Приводим дату в нужный формат
+//Приводим дату в нужный для ссылки запроса формат
 const dateTo = `${dateCurrent.getFullYear()}-${dateCurrent.getMonth() + 1}-${dateCurrent.getDate()}`
 const dateFrom = `${weekAgo.getFullYear()}-${weekAgo.getMonth() + 1}-${weekAgo.getDate()}`
 
@@ -34,8 +34,6 @@ const cardList = new NewsCardList(document.querySelector(".card-box_type_news"),
 const dataStorage = new DataStorage(localStorage);
 const input = new SearchInput(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton, dataStorage);
 
-
-console.log(dataStorage)
 
 //Слушатели
 

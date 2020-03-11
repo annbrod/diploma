@@ -20,19 +20,15 @@ export default class CommitCardList {
     this.api
       .getCommits()
       .then(res => {
-        console.log(res)
 
-        res.forEach(res => {
-          this.addCard(res.commit, res.author);
+
+        res.forEach(commit => {
+          this.addCard(commit.commit, commit.author);
         })
-        console.log(res)
       })
-
-
-
-
-
-
+      .catch(err =>
+        console.log(err)
+      )
 
   }
 

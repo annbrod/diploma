@@ -33,20 +33,16 @@ export default class SearchInput {
     this.newsApi.getNews(searchInput.value, dateFrom, dateTo)
       .then(res => {
         //Если карточки есть
-        console.log(res)
         if (res.articles.length) {
           //Очищаем хранилище от предыдущих карточек и keyword
           this.dataStorage.clear();
-          console.log(res);
           //Сохраняем в локальное хранилище
-          console.log(searchInput.value.toString());
           this.dataStorage.set('word', searchInput.value);
           let cardsObj = JSON.stringify(res.articles);
           this.dataStorage.set('cards', cardsObj);
           this.newsApi.getNews(searchInput.value, dateFrom, dateTo)
 
             .then(res => {
-              console.log(res.articles);
               this.fail.classList.remove("fail_is-opened");
               this.cardList.renderInitial(res.articles, searchInput.value);
               this.loading.classList.remove("load_is-opened");
@@ -60,7 +56,6 @@ export default class SearchInput {
               this.titleSection.classList.remove("title-section_is-opened");
               this.results.classList.add("results_is-opened");
               this.results.textContent = this.errors.serverError
-              console.log(err)
             })
 
           //Если карточек нет
@@ -79,7 +74,6 @@ export default class SearchInput {
         this.titleSection.classList.remove("title-section_is-opened");
         this.results.classList.add("results_is-opened");
         this.results.textContent = this.errors.serverError
-        console.log(err);
       })
   }
 

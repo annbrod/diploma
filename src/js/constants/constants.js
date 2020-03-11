@@ -1,7 +1,7 @@
 
 
 export const NEWS_API_CONFIG = {
-  url: 'http://newsapi.org/v2/everything?',
+  url: 'https://newsapi.org/v2/everything?',
   key: "63b5f098fd034406940a01211c81af94",
   pageSize: 100,
 }
