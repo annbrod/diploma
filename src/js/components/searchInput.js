@@ -38,7 +38,7 @@ export default class SearchInput {
           this.dataStorage.clear(this.errors);
           //Сохраняем в локальное хранилище
           this.dataStorage.set('word', searchInput.value);
-          let cardsObj = JSON.stringify(res.articles);
+          const cardsObj = JSON.stringify(res.articles);
           this.dataStorage.set('cards', cardsObj);
           this.fail.classList.remove("fail_is-opened");
           this.cardList.renderInitial(res.articles, searchInput.value);
