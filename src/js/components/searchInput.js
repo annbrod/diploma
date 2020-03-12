@@ -35,7 +35,7 @@ export default class SearchInput {
         //Если карточки есть
         if (res.articles.length) {
           //Очищаем хранилище от предыдущих карточек и keyword
-          this.dataStorage.clear(this.errors);
+          this.dataStorage.clear();
           //Сохраняем в локальное хранилище
           this.dataStorage.set('word', searchInput.value);
           const cardsObj = JSON.stringify(res.articles);
