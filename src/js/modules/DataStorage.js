@@ -1,23 +1,48 @@
 export default class DataStorage {
-  constructor(storage) {
+  constructor(storage, ERROR_MESSAGES) {
     this.storage = storage;
+    this.errors = ERROR_MESSAGES;
   }
 
   clear() {
-    this.storage.clear()
+    try {
+      this.storage.clear();
+    }
+    catch (error) {
+      console.log(error)
+      alert(this.errors.storageError);
+    }
+
   }
 
   set(key, value) {
-    this.storage.setItem(key, value);
+    try {
+      this.storage.setItem(key, value);
+    }
+    catch (error) {
+      console.log(error)
+    }
   }
 
   getObject(key) {
-    return JSON.parse(this.storage.getItem(key));
+    try {
+      return JSON.parse(this.storage.getItem(key));
+    }
+    catch (error) {
+      console.log(error)
+    }
+
   }
 
   getString(key) {
 
-    return this.storage.getItem(key);
+    try {
+      return this.storage.getItem(key);
+    }
+    catch (error) {
+      console.log(error)
+    }
+
   }
 
 }

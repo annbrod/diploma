@@ -1,5 +1,6 @@
 import "./pages/about/about.css";
 import { GITHUB_API_CONFIG } from "./js/constants/constants";
+import { ERROR_MESSAGES } from "./js/constants/constants";
 
 
 import Swiper from 'swiper';

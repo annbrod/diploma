@@ -31,7 +31,7 @@ const dateFrom = `${weekAgo.getFullYear()}-${weekAgo.getMonth() + 1}-${weekAgo.g
 const newsApi = new NewsApi(NEWS_API_CONFIG);
 const card = new NewsCard(newsApi);
 const cardList = new NewsCardList(document.querySelector(".card-box_type_news"), card);
-const dataStorage = new DataStorage(localStorage);
+const dataStorage = new DataStorage(localStorage, ERROR_MESSAGES);
 const input = new SearchInput(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton, dataStorage);
 
 

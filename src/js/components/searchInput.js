@@ -35,28 +35,16 @@ export default class SearchInput {
         //Если карточки есть
         if (res.articles.length) {
           //Очищаем хранилище от предыдущих карточек и keyword
-          this.dataStorage.clear();
+          this.dataStorage.clear(this.errors);
           //Сохраняем в локальное хранилище
           this.dataStorage.set('word', searchInput.value);
           let cardsObj = JSON.stringify(res.articles);
           this.dataStorage.set('cards', cardsObj);
-          this.newsApi.getNews(searchInput.value, dateFrom, dateTo)
-
-            .then(res => {
-              this.fail.classList.remove("fail_is-opened");
-              this.cardList.renderInitial(res.articles, searchInput.value);
-              this.loading.classList.remove("load_is-opened");
-              this.titleSection.classList.add("title-section_is-opened");
-              this.results.classList.add("results_is-opened");
-            })
-            .catch(err => {
-              this.cardList.renderInitial(res.articles, searchInput.value);
-              this.fail.classList.remove("fail_is-opened");
-              this.loading.classList.remove("load_is-opened");
-              this.titleSection.classList.remove("title-section_is-opened");
-              this.results.classList.add("results_is-opened");
-              this.results.textContent = this.errors.serverError
-            })
+          this.fail.classList.remove("fail_is-opened");
+          this.cardList.renderInitial(res.articles, searchInput.value);
+          this.loading.classList.remove("load_is-opened");
+          this.titleSection.classList.add("title-section_is-opened");
+          this.results.classList.add("results_is-opened");
 
           //Если карточек нет
         } else {

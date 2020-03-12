@@ -4,7 +4,7 @@ export default class Statistics {
   }
 
   getDates(dateCurrent, DAY_IN_MILLISECONDS) {
-    let dates = [dateCurrent];
+    const dates = [dateCurrent];
     function add(dates) {
       for (let i = 1; i < 7; i++) {
         dates.unshift(new Date(dateCurrent - DAY_IN_MILLISECONDS * i));
@@ -13,7 +13,7 @@ export default class Statistics {
     add(dates)
 
     //Приводит даты к нужному формату
-    let datesShort = dates.map(function (item) {
+    const datesShort = dates.map(function (item) {
       item = `${item.toLocaleString("ru", { day: "numeric" })}, ${item.toLocaleString("ru", { weekday: 'short' })}`
       return item
     });
@@ -38,7 +38,7 @@ export default class Statistics {
     });
 
 
-    let cardsObjDates = this.returnCardsObj.map(function (item) {
+    const cardsObjDates = this.returnCardsObj.map(function (item) {
       item.publishedAt = `${item.publishedAt.toLocaleString("ru", { day: "numeric" })}, ${item.publishedAt.toLocaleString("ru", { weekday: 'short' })}`
       return item.publishedAt
     })
@@ -53,7 +53,7 @@ export default class Statistics {
     function addCardsToBars() {
       for (let i = 0; i < 7; i++) {
 
-        let a = cardsObjDates.filter(function (item) {
+        const a = cardsObjDates.filter(function (item) {
           return item === datesShort[i]
         })
 

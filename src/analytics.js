@@ -1,14 +1,15 @@
 import "./pages/analytics/analytics.css";
 import { DAY_IN_MILLISECONDS } from "./js/constants/constants";
+import { ERROR_MESSAGES } from "./js/constants/constants";
 import DataStorage from "./js/modules/DataStorage";
 import Statistics from "./js/components/Statistics";
 
 
-const dataStorage = new DataStorage(localStorage);
+const dataStorage = new DataStorage(localStorage, ERROR_MESSAGES);
 const dateCurrent = new Date();
 
-let returnCardsObj = dataStorage.getObject("cards");
-let returnWord = dataStorage.getString("word");
+const returnCardsObj = dataStorage.getObject("cards");
+const returnWord = dataStorage.getString("word");
 
 
 //Вы спросили
@@ -49,8 +50,8 @@ returnCardsObj.forEach(function (item, i) {
 
 //Формирование графика
 const statistics = new Statistics(returnCardsObj);
-let datesShort = statistics.getDates(dateCurrent, DAY_IN_MILLISECONDS);
+const datesShort = statistics.getDates(dateCurrent, DAY_IN_MILLISECONDS);
 statistics.getGraphicDates(datesShort);
-let cardsObjDates = statistics.formateDate();
+const cardsObjDates = statistics.formateDate();
 statistics.constructGraphic(cardsObjDates, datesShort);
 
