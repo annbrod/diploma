@@ -1,8 +1,9 @@
 @import url(./title-section_type_git.css);
 @import url(./title-section_type_cards.css);
+@import url(./title-section_is-opened.css);
 
 .title-section {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
 }

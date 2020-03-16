@@ -1,14 +1,30 @@
-import "./pages/about.css";
+import "./pages/about/about.css";
+import { GITHUB_API_CONFIG } from "./js/constants/constants";
+import { ERROR_MESSAGES } from "./js/constants/constants";
 
 
 import Swiper from 'swiper';
+import GithubApi from "./js/modules/GithubApi";
+import CommitCard from "./js/components/CommitCard";
+import CommitCardList from "./js/components/CommitCardList";
 
-var swiper = new Swiper('.swiper-container', {
+
+const githubApi = new GithubApi(GITHUB_API_CONFIG);
+const commit = new CommitCard(githubApi);
+const commitCardList = new CommitCardList(document.querySelector(".swiper-wrapper"), commit, githubApi);
+commitCardList.render();
+setTimeout(function () {
+  swiper.update();
+}, 1000);
+
+
+
+const swiper = new Swiper('.swiper-container', {
   slidesPerView: 'auto',
   slidesPerColumn: 0,
   loop: true,
   uniqueNavElements: true,
-  loopedSlides: 6,
+  loopedSlides: 3,
   loopFillGroupWithBlank: true,
   pagination: {
     el: '.swiper-pagination',
@@ -19,3 +35,4 @@ var swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper__button-prev',
   },
 });
+
