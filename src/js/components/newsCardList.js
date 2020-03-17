@@ -26,7 +26,6 @@ export default class NewsCardList {
     const searchForm = document.forms.form;
     const searchInput = searchForm.elements.search;
     if (cards) {
-      console.log(cards);
       searchInput.value = word;
       this.renderInitial(cards, word);
       this.titleSection.classList.add("title-section_is-opened");
