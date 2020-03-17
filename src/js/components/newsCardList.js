@@ -1,8 +1,10 @@
 export default class NewsCardList {
   //передаём  шаблон карточки
-  constructor(container, cardElement) {
+  constructor(container, cardElement, titleSection, results) {
     this.container = container;
     this.cardElement = cardElement;
+    this.titleSection = titleSection;
+    this.results = results;
     this.count = 0;
   }
 
@@ -13,6 +15,23 @@ export default class NewsCardList {
     //добавляем карточку в cardList
     this.container.insertAdjacentHTML("beforeend", card);
     this.word = word;
+  }
+
+
+  //Добавляет карточки на страницу, если они есть в хранилище (сохраняет карточки по возвращению на главную)
+  renderCurrent(dataStorage) {
+    this.dataStorage = dataStorage;
+    const cards = this.dataStorage.getObject('cards');
+    const word = this.dataStorage.getString('word');
+    const searchForm = document.forms.form;
+    const searchInput = searchForm.elements.search;
+    if (cards) {
+      console.log(cards);
+      searchInput.value = word;
+      this.renderInitial(cards, word);
+      this.titleSection.classList.add("title-section_is-opened");
+      this.results.classList.add("results_is-opened");
+    }
   }
 
   //Добавляет первые три (или меньше) карточек

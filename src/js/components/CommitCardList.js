@@ -21,7 +21,7 @@ export default class CommitCardList {
       .getCommits()
       .then(res => {
 
-
+        res.length > 20 ? res.length = 20 : res.length
         res.forEach(commit => {
           this.addCard(commit.commit, commit.author);
         })
@@ -33,3 +33,17 @@ export default class CommitCardList {
   }
 
 }
+
+
+// if (res.length > 20) {
+//   res = res.slice(0, 20)
+//   console.log(res)
+//   res.forEach(commit => {
+//     this.addCard(commit.commit, commit.author);
+//   })
+// } else {
+//   res.forEach(commit => {
+//     this.addCard(commit.commit, commit.author);
+//   })
+// }
+// })
