@@ -21,18 +21,15 @@ export default class Statistics {
     return datesShort;
   }
 
-  getGraphicDates(datesShort) {
-    //Массив спанов с датами из графика
-    const graphicDates = document.querySelectorAll(".graphic__day");
-
+  getGraphicDates(datesShort, graphicDates) {
+    this.graphicDates = graphicDates;
     //Проставляет даты в график
-    graphicDates.forEach(function (i, item) {
+    this.graphicDates.forEach(function (i, item) {
       i.textContent = datesShort[item];
     });
   }
 
   formateDate() {
-
     this.returnCardsObj.forEach(function (item, i) {
       item.publishedAt = new Date(item.publishedAt)
     });
@@ -45,10 +42,9 @@ export default class Statistics {
     return cardsObjDates;
   }
 
-  constructGraphic(cardsObjDates, datesShort) {
-    const barsTexts = document.querySelectorAll(".graphic__text");
-    const bars = document.querySelectorAll(".graphic__bar");
-
+  constructGraphic(cardsObjDates, datesShort, barsTexts, bars) {
+    this.barsTexts = barsTexts;
+    this.bars = bars;
     //Разбивает статьи на 7 баров
     function addCardsToBars() {
       for (let i = 0; i < 7; i++) {

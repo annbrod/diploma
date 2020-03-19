@@ -11,13 +11,14 @@ import SearchInput from "./js/components/SearchInput";
 
 
 const searchForm = document.forms.form;
+const searchInput = searchForm.elements.search;
+const searchButton = document.querySelector('.button_type_search');
 const results = document.querySelector(".results");
 const fail = results.querySelector(".fail")
-const resultsNews = results.querySelector(".card-box_type_news")
 const loading = results.querySelector(".load")
 const moreButton = results.querySelector(".button_type_more");
 const titleSection = results.querySelector(".title-section_type_cards");
-
+const cardBox = document.querySelector(".card-box_type_news");
 
 
 const dateCurrent = new Date()
@@ -30,10 +31,10 @@ const dateFrom = `${weekAgo.getFullYear()}-${weekAgo.getMonth() + 1}-${weekAgo.g
 
 const newsApi = new NewsApi(NEWS_API_CONFIG);
 const card = new NewsCard(newsApi);
-const cardList = new NewsCardList(document.querySelector(".card-box_type_news"), card, titleSection, results);
+const cardList = new NewsCardList(cardBox, card, titleSection, results, moreButton);
 const dataStorage = new DataStorage(localStorage, ERROR_MESSAGES);
-const input = new SearchInput(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton, dataStorage);
-cardList.renderCurrent(dataStorage);
+const input = new SearchInput(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton, dataStorage, searchForm, searchInput, searchButton);
+cardList.renderCurrent(dataStorage, searchInput);
 
 //Слушатели
 

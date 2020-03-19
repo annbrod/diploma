@@ -1,7 +1,7 @@
 
 
 export default class SearchInput {
-  constructor(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton, dataStorage) {
+  constructor(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton, dataStorage, searchForm, searchInput, searchButton) {
     this.errors = ERROR_MESSAGES;
     this.card = card;
     this.cardList = cardList;
@@ -12,13 +12,15 @@ export default class SearchInput {
     this.titleSection = titleSection;
     this.moreButton = moreButton;
     this.dataStorage = dataStorage;
+    this.searchForm = searchForm;
+    this.searchInput = searchInput;
+    this.searchButton = searchButton;
+    this.error = document.querySelector(`#error-search`);
   }
 
   submit(event, dateTo, dateFrom) {
     event.preventDefault();
 
-    const searchForm = document.forms.form;
-    const searchInput = searchForm.elements.search;
     //Очищает список от предыдущих результатов, если есть
     this.cardList.clear()
     this.fail.classList.remove("fail_is-opened");
@@ -30,18 +32,18 @@ export default class SearchInput {
     //Прячет кнопку 'Показать еще'
     this.moreButton.classList.add("button_is-hidden")
     //Добавляет карточки
-    this.newsApi.getNews(searchInput.value, dateFrom, dateTo)
+    this.newsApi.getNews(this.searchInput.value, dateFrom, dateTo)
       .then(res => {
         //Если карточки есть
         if (res.articles.length) {
           //Очищаем хранилище от предыдущих карточек и keyword
           this.dataStorage.clear();
           //Сохраняем в локальное хранилище
-          this.dataStorage.set('word', searchInput.value);
+          this.dataStorage.set('word', this.searchInput.value);
           const cardsObj = JSON.stringify(res.articles);
           this.dataStorage.set('cards', cardsObj);
           this.fail.classList.remove("fail_is-opened");
-          this.cardList.renderInitial(res.articles, searchInput.value);
+          this.cardList.renderInitial(res.articles, this.searchInput.value);
           this.loading.classList.remove("load_is-opened");
           this.titleSection.classList.add("title-section_is-opened");
           this.results.classList.add("results_is-opened");
@@ -82,27 +84,25 @@ export default class SearchInput {
 
   checkEmptyField(event) {
     if (event.target.value.length === 0) {
-      document.querySelector(`#error-search`).textContent = this.errors.emptyField;
+      this.error.textContent = this.errors.emptyField;
     }
   }
 
   checkIfCorrect(event) {
     if (event.target.validity.valid) {
-      document.querySelector(`#error-search`).textContent = "";
+      this.error.textContent = "";
     }
   }
 
 
   //Отключение кнопки формы
   disableButton() {
-    const searchButton = document.querySelector('.button_type_search');
-    searchButton.setAttribute("disabled", true);
+    this.searchButton.setAttribute("disabled", true);
   }
 
   //Велючение кнопки формы
   enableButton() {
-    const searchButton = document.querySelector('.button_type_search');
-    searchButton.removeAttribute("disabled");
+    this.searchButton.removeAttribute("disabled");
   }
 
 }

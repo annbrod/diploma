@@ -1,11 +1,12 @@
 export default class NewsCardList {
   //передаём  шаблон карточки
-  constructor(container, cardElement, titleSection, results) {
+  constructor(container, cardElement, titleSection, results, moreButton) {
     this.container = container;
     this.cardElement = cardElement;
     this.titleSection = titleSection;
     this.results = results;
     this.count = 0;
+    this.moreButton = moreButton;
   }
 
   //Создаёт карточку
@@ -19,14 +20,13 @@ export default class NewsCardList {
 
 
   //Добавляет карточки на страницу, если они есть в хранилище (сохраняет карточки по возвращению на главную)
-  renderCurrent(dataStorage) {
+  renderCurrent(dataStorage, searchInput) {
     this.dataStorage = dataStorage;
     const cards = this.dataStorage.getObject('cards');
     const word = this.dataStorage.getString('word');
-    const searchForm = document.forms.form;
-    const searchInput = searchForm.elements.search;
+    this.searchInput = searchInput;
     if (cards) {
-      searchInput.value = word;
+      this.searchInput.value = word;
       this.renderInitial(cards, word);
       this.titleSection.classList.add("title-section_is-opened");
       this.results.classList.add("results_is-opened");
@@ -44,12 +44,11 @@ export default class NewsCardList {
 
   //Добавляет карточки по нажатию "Показать ещё"
   render() {
-    const moreButton = document.querySelector('.button_type_more');
-    moreButton.classList.remove("button_is-hidden")
+    this.moreButton.classList.remove("button_is-hidden")
     //загружаем по три карточки
     for (let i = this.total; i < this.total + 3; i++) {
       if (i >= this.cardsSum) {
-        moreButton.classList.add("button_is-hidden")
+        this.moreButton.classList.add("button_is-hidden")
         if (i = this.cardsSum) {
           return;
         }
