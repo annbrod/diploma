@@ -1,8 +1,9 @@
 import "./pages/analytics/analytics.css";
 import { DAY_IN_MILLISECONDS } from "./js/constants/constants";
 import { ERROR_MESSAGES } from "./js/constants/constants";
-import DataStorage from "./js/modules/DataStorage";
-import Statistics from "./js/components/Statistics";
+import { DAYS_IN_WEEK } from "./js/constants/constants";
+import DataStorage from "./js/modules/data-storage";
+import Statistics from "./js/components/analytics";
 
 
 const dataStorage = new DataStorage(localStorage, ERROR_MESSAGES);
@@ -53,7 +54,7 @@ returnCardsObj.forEach(function (item, i) {
 
 //Формирование графика
 const statistics = new Statistics(returnCardsObj);
-const datesShort = statistics.getDates(dateCurrent, DAY_IN_MILLISECONDS);
+const datesShort = statistics.getDates(dateCurrent, DAY_IN_MILLISECONDS, DAYS_IN_WEEK);
 statistics.getGraphicDates(datesShort, graphicDates);
 const cardsObjDates = statistics.formateDate();
 statistics.constructGraphic(cardsObjDates, datesShort, barsTexts, bars);

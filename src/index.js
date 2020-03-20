@@ -2,11 +2,12 @@ import "./pages/index.css";
 import { ERROR_MESSAGES } from "./js/constants/constants";
 import { NEWS_API_CONFIG } from "./js/constants/constants";
 import { WEEK_IN_MILLISECONDS } from "./js/constants/constants";
-import NewsApi from "./js/modules/NewsApi"
-import DataStorage from "./js/modules/DataStorage";
-import NewsCard from "./js/components/NewsCard";
-import NewsCardList from "./js/components/NewsCardList";
-import SearchInput from "./js/components/SearchInput";
+import { INITIAL_CARDS_NUMBER } from "./js/constants/constants"
+import NewsApi from "./js/modules/news-api"
+import DataStorage from "./js/modules/data-storage";
+import NewsCard from "./js/components/card";
+import NewsCardList from "./js/components/card-box_type_news";
+import SearchInput from "./js/components/search";
 
 
 
@@ -31,30 +32,38 @@ const dateFrom = `${weekAgo.getFullYear()}-${weekAgo.getMonth() + 1}-${weekAgo.g
 
 const newsApi = new NewsApi(NEWS_API_CONFIG);
 const card = new NewsCard(newsApi);
-const cardList = new NewsCardList(cardBox, card, titleSection, results, moreButton);
+const cardList = new NewsCardList(cardBox, card, titleSection, results, moreButton, INITIAL_CARDS_NUMBER);
 const dataStorage = new DataStorage(localStorage, ERROR_MESSAGES);
 const input = new SearchInput(ERROR_MESSAGES, card, cardList, results, loading, newsApi, fail, titleSection, moreButton, dataStorage, searchForm, searchInput, searchButton);
 cardList.renderCurrent(dataStorage, searchInput);
 
-//Слушатели
+//Функции
+function onClickRenderCards() {
+  cardList.render()
+}
+
+function submitHandler(event) {
+  input.submit(event, dateTo, dateFrom)
+}
+
+function inputHandler(event) {
+  input.validate(event)
+}
+
+function onClickInputValidate(event) {
+  input.validate(event)
+}
 
 //слушатель кнопки Показать еще
-moreButton.addEventListener('click', function () {
-  cardList.render()
-});
+moreButton.addEventListener('click', onClickRenderCards);
 
 //Слушатель формы
-searchForm.addEventListener('submit', event => {
-  input.submit(event, dateTo, dateFrom)
-});
+searchForm.addEventListener('submit', submitHandler);
 
-// //Слушатель валидации формы
-searchForm.addEventListener("input", event => {
-  input.validate(event)
-});
-searchForm.addEventListener("click", event => {
-  input.validate(event)
-});
+//Слушатели валидации формы
+searchForm.addEventListener("input", inputHandler);
+
+searchForm.addEventListener("click", onClickInputValidate);
 
 
 

@@ -5,14 +5,14 @@ export default class CommitCard {
   //Создает шаблон cлайда
   create(commit, author) {
     //Приводит дату к нужному формату
-    this.date = commit.committer.date
-    this.date = new Date(this.date)
-    this.date = `${this.date.toLocaleString("ru", { day: "numeric", month: 'long' })}, ${this.date.toLocaleString("ru", { year: 'numeric' })}`
+    this._date = commit.committer.date
+    this._date = new Date(this._date)
+    this._date = `${this._date.toLocaleString("ru", { day: "numeric", month: 'long' })}, ${this._date.toLocaleString("ru", { year: 'numeric' })}`
 
     //Создает разметку слайда
     if (!author) {
       return `  <div class="swiper-slide">
-      <span class="swiper-slide__date">${this.date}</span>
+      <span class="swiper-slide__date">${this._date}</span>
       <div class="swiper-slide__info">
         <div class="swiper-slide__image"></div>
         <div class="swiper-slide__contacts">
@@ -27,7 +27,7 @@ export default class CommitCard {
     }
     else {
       return `  <div class="swiper-slide">
-      <span class="swiper-slide__date">${this.date}</span>
+      <span class="swiper-slide__date">${this._date}</span>
       <div class="swiper-slide__info">
         <div class="swiper-slide__image" style="background-image: url(${author.avatar_url});"></div>
         <div class="swiper-slide__contacts">

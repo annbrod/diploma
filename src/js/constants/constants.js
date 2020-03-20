@@ -21,4 +21,6 @@ export const ERROR_MESSAGES = {
 export const WEEK_IN_MILLISECONDS = 604800000;
 
 export const DAY_IN_MILLISECONDS = 86400000;
-
+export const COMMITS_NUMBER = 20;
+export const INITIAL_CARDS_NUMBER = 3;
+export const DAYS_IN_WEEK = 7;
