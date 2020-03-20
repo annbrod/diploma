@@ -1,8 +1,9 @@
 import "./pages/analytics/analytics.css";
 import { DAY_IN_MILLISECONDS } from "./js/constants/constants";
 import { ERROR_MESSAGES } from "./js/constants/constants";
-import DataStorage from "./js/modules/DataStorage";
-import Statistics from "./js/components/Statistics";
+import { DAYS_IN_WEEK } from "./js/constants/constants";
+import DataStorage from "./js/modules/data-storage";
+import Statistics from "./js/components/analytics";
 
 
 const dataStorage = new DataStorage(localStorage, ERROR_MESSAGES);
@@ -10,7 +11,10 @@ const dateCurrent = new Date();
 
 const returnCardsObj = dataStorage.getObject("cards");
 const returnWord = dataStorage.getString("word");
-
+//Массив спанов с датами из графика
+const graphicDates = document.querySelectorAll(".graphic__day");
+const barsTexts = document.querySelectorAll(".graphic__text");
+const bars = document.querySelectorAll(".graphic__bar");
 
 //Вы спросили
 const requestWord = document.querySelector(".request__word");
@@ -50,8 +54,8 @@ returnCardsObj.forEach(function (item, i) {
 
 //Формирование графика
 const statistics = new Statistics(returnCardsObj);
-const datesShort = statistics.getDates(dateCurrent, DAY_IN_MILLISECONDS);
-statistics.getGraphicDates(datesShort);
+const datesShort = statistics.getDates(dateCurrent, DAY_IN_MILLISECONDS, DAYS_IN_WEEK);
+statistics.getGraphicDates(datesShort, graphicDates);
 const cardsObjDates = statistics.formateDate();
-statistics.constructGraphic(cardsObjDates, datesShort);
+statistics.constructGraphic(cardsObjDates, datesShort, barsTexts, bars);
 

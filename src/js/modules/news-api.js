@@ -1,13 +1,13 @@
 export default class NewsApi {
   constructor({ url, key, pageSize }) {
-    this.url = url;
-    this.apiKey = key;
-    this.pageSize = pageSize;
+    this._url = url;
+    this._apiKey = key;
+    this._pageSize = pageSize;
   }
 
   getNews(word, dateFrom, dateTo) {
 
-    return fetch(`${this.url}q=${word}&from=${dateFrom}&to=${dateTo}&sortBy=publishedAt&pageSize=${this.pageSize}&apiKey=${this.apiKey}`)
+    return fetch(`${this._url}q=${word}&from=${dateFrom}&to=${dateTo}&sortBy=publishedAt&pageSize=${this._pageSize}&apiKey=${this._apiKey}`)
       .then(res => {
         if (!res.ok) {
           return Promise.reject(`Ошибка: ${res.status}`);
