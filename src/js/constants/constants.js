@@ -2,7 +2,7 @@
 
 export const NEWS_API_CONFIG = {
   url: 'https://newsapi.org/v2/everything?',
-  key: "63b5f098fd034406940a01211c81af94",
+  key: "4860895de2d0436c84d156870c8e1342",
   pageSize: 100,
 }
 
