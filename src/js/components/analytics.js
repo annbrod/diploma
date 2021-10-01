@@ -1,12 +1,12 @@
 export default class Statistics {
   constructor(returnCardsObj) {
-    this.returnCardsObj = returnCardsObj;
+    this._returnCardsObj = returnCardsObj;
   }
 
-  getDates(dateCurrent, DAY_IN_MILLISECONDS) {
+  getDates(dateCurrent, DAY_IN_MILLISECONDS, DAYS_IN_WEEK) {
     const dates = [dateCurrent];
     function add(dates) {
-      for (let i = 1; i < 7; i++) {
+      for (let i = 1; i < DAYS_IN_WEEK; i++) {
         dates.unshift(new Date(dateCurrent - DAY_IN_MILLISECONDS * i));
       }
     };
@@ -21,34 +21,30 @@ export default class Statistics {
     return datesShort;
   }
 
-  getGraphicDates(datesShort) {
-    //Массив спанов с датами из графика
-    const graphicDates = document.querySelectorAll(".graphic__day");
-
+  getGraphicDates(datesShort, graphicDates) {
+    this._graphicDates = graphicDates;
     //Проставляет даты в график
-    graphicDates.forEach(function (i, item) {
+    this._graphicDates.forEach(function (i, item) {
       i.textContent = datesShort[item];
     });
   }
 
   formateDate() {
-
-    this.returnCardsObj.forEach(function (item, i) {
+    this._returnCardsObj.forEach(function (item, i) {
       item.publishedAt = new Date(item.publishedAt)
     });
 
 
-    const cardsObjDates = this.returnCardsObj.map(function (item) {
+    const cardsObjDates = this._returnCardsObj.map(function (item) {
       item.publishedAt = `${item.publishedAt.toLocaleString("ru", { day: "numeric" })}, ${item.publishedAt.toLocaleString("ru", { weekday: 'short' })}`
       return item.publishedAt
     })
     return cardsObjDates;
   }
 
-  constructGraphic(cardsObjDates, datesShort) {
-    const barsTexts = document.querySelectorAll(".graphic__text");
-    const bars = document.querySelectorAll(".graphic__bar");
-
+  constructGraphic(cardsObjDates, datesShort, barsTexts, bars) {
+    this.barsTexts = barsTexts;
+    this.bars = bars;
     //Разбивает статьи на 7 баров
     function addCardsToBars() {
       for (let i = 0; i < 7; i++) {
